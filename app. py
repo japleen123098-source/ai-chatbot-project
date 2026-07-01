@@ -10,7 +10,7 @@ if user_input:
     question = user_input.lower()
 
     if "what is ai" in question or "artificial intelligence" in question:
-        response = "Artificial Intelligence (AI) is the ability of machines to perform tasks that normally require human intelligence such as learning, reasoning, and decision-making."
+        response = "Artificial Intelligence (AI) is the ability of machines to perform tasks that normally require human intelligence."
 
     elif "applications of ai" in question or "uses of ai" in question:
         response = "AI is used in healthcare, education, banking, transportation, entertainment, robotics, and virtual assistants."
@@ -25,15 +25,9 @@ if user_input:
         response = "Data Acquisition is the process of collecting relevant data for the AI project."
 
     elif "data exploration" in question:
-        response = "Data Exploration involves studying and understanding the collected data through analysis and visualization."
-
-    elif "modelling" in question or "modeling" in question:
-        response = "Modelling is the process of training an AI model using the collected data."
-
-    elif "evaluation" in question:
-        response = "Evaluation checks the accuracy and performance of the AI model."
+        response = "Data Exploration involves studying and understanding the collected data."
 
     else:
-        response = "Sorry, I can only answer questions about Introduction to AI and the AI Project Cycle."
+        response = "Sorry, I don't know the answer to that question."
 
     st.success(response)
