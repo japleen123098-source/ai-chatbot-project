@@ -1,0 +1,39 @@
+import streamlit as st
+
+st.set_page_config(page_title="AI Chatbot", page_icon="🤖")
+
+st.title("🤖 Introduction to AI & AI Project Cycle Chatbot")
+
+user_input = st.text_input("Ask a question:")
+
+if user_input:
+    question = user_input.lower()
+
+    if "what is ai" in question or "artificial intelligence" in question:
+        response = "Artificial Intelligence (AI) is the ability of machines to perform tasks that normally require human intelligence such as learning, reasoning, and decision-making."
+
+    elif "applications of ai" in question or "uses of ai" in question:
+        response = "AI is used in healthcare, education, banking, transportation, entertainment, robotics, and virtual assistants."
+
+    elif "ai project cycle" in question or "project cycle" in question:
+        response = "The AI Project Cycle has 5 stages: Problem Scoping, Data Acquisition, Data Exploration, Modelling, and Evaluation."
+
+    elif "problem scoping" in question:
+        response = "Problem Scoping means identifying and understanding the problem that needs to be solved using AI."
+
+    elif "data acquisition" in question:
+        response = "Data Acquisition is the process of collecting relevant data for the AI project."
+
+    elif "data exploration" in question:
+        response = "Data Exploration involves studying and understanding the collected data through analysis and visualization."
+
+    elif "modelling" in question or "modeling" in question:
+        response = "Modelling is the process of training an AI model using the collected data."
+
+    elif "evaluation" in question:
+        response = "Evaluation checks the accuracy and performance of the AI model."
+
+    else:
+        response = "Sorry, I can only answer questions about Introduction to AI and the AI Project Cycle."
+
+    st.success(response)
